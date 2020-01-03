@@ -14,7 +14,7 @@ public class StringUtilTest {
 
 	@Test
 	public void testHasText() {
-		boolean b = StringUtil.hasLength(" ");
+		boolean b = StringUtil.hasText(".");
 		System.out.println(b);
 	}
 
@@ -26,7 +26,7 @@ public class StringUtilTest {
 	
 	@Test
 	public void testRandomChineseString2() {
-		String name = StringUtil.randomChineseString(10);
+		String name = StringUtil.randomChineseString(1000);
 		System.out.println(name);
 	}
 

@@ -12,7 +12,6 @@ public class StringUtil {
 
 	// 方法2：判断源字符串
 	public static boolean hasText(String src) {
-
 		return null != src && src.trim().length() > 0;
 	}
 
@@ -72,12 +71,12 @@ public class StringUtil {
 				"单于", "太叔", "申屠", "公孙", "仲孙", "轩辕", "令狐", "锺离", "宇文", "长孙", "慕容", "鲜于", "闾丘", "司徒", "司空", "丌官", "司寇",
 				"仉", "督", "子车", "颛孙", "端木", "巫马", "公西", "漆雕", "乐正", "壤驷", "公良", "拓拔", "夹谷", "宰父", "谷梁", "段干", "百里",
 				"东郭", "南门", "呼延", "归", "海", "羊舌", "微生", "梁丘", "左丘", "东门", "西门", "南宫" };
-		String firstName = str[RandomUtil.random(0, str.length-1)];
+		String firstName = str[RandomUtil.random(0, str.length - 1)];
 		String lastName = randomChineseString(RandomUtil.random(1, 2));
-		
-		return firstName+lastName;
+
+		return firstName + lastName;
 	}
-	
+
 	// 方法5 。判断输入的是否是手机号
 	public static boolean isPhoneNumber(String src) {
 		if (hasText(src)) {
@@ -86,7 +85,7 @@ public class StringUtil {
 		}
 		return false;
 	}
-	
+
 	// 方法6 判断是否是邮箱 字母数字下划线开头 @ 字母数字下划线 . 字母数字 number2000@163.com
 	public static boolean isEMail(String src) {
 		if (hasText(src)) {

@@ -2,6 +2,7 @@ package com.liuxingchen.util;
 
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Random;
 
 /**
  * 
@@ -16,6 +17,7 @@ public class DataUtil {
 	public static Date initMonth(Date date) {
 		Calendar c = Calendar.getInstance();
 		c.setTime(date);
+		c.set(Calendar.DAY_OF_MONTH, 1);
 		c.set(Calendar.HOUR_OF_DAY, 0);
 		c.set(Calendar.MINUTE, 0);
 		c.set(Calendar.SECOND, 0);
