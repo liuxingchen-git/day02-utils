@@ -17,6 +17,8 @@ public class NumberUtil {
 	 */
 	public static boolean isNumber(String src) {
 		String reg = "^(-)?[0-9]+(\\.[0-9]+)?$";
+		System.out.println(reg);
 		return src.matches(reg);
 	}
+	
 }
