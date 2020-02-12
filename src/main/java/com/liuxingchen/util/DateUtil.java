@@ -11,8 +11,22 @@ import java.util.Random;
  * @author: HP
  * @date: 2020年1月2日 下午7:52:29
  */
-public class DataUtil {
+public class DateUtil {
 
+	//把传入的日期向前对减24个小时，即1天
+	public static Date subDate(Date date) {
+		
+		//用当亲系统时间去实例化一个日历类
+		Calendar c = Calendar.getInstance();
+		//用传入的日期实例化日历类
+		c.setTime(date);
+		
+		//借助日历类减去1天
+		c.add(Calendar.DATE, -1);
+		
+		return c.getTime();
+	}
+	
 	// 获取一个月的月初 如 ：2020-01-01 00:00:00
 	public static Date initMonth(Date date) {
 		Calendar c = Calendar.getInstance();

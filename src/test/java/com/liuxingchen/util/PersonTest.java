@@ -22,7 +22,7 @@ public class PersonTest {
 			
 			Calendar c = Calendar.getInstance();
 			c.set(2010, 0, 1);
-			p.setCreated(DataUtil.randomDate(c.getTime(), new Date()));
+			p.setCreated(DateUtil.randomDate(c.getTime(), new Date()));
 			System.out.println(p);
 		}
 	}

@@ -8,12 +8,22 @@ import java.util.Date;
 import org.junit.Test;
 
 public class DataUtilTest {
+	
+	@Test
+	public void testSubDate() {
+		
+		SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		Date date = DateUtil.subDate(new Date());
+		String format = df.format(date);
+		System.out.println(format);
+		
+	}
 
 	@Test
 	public void testRandomDate() {
 		SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		for (int i = 0; i < 1000; i++) {
-			Date date = DataUtil.randomDate(new Date(0), new Date());
+			Date date = DateUtil.randomDate(new Date(0), new Date());
 			System.out.println(df.format(date));
 		}
 	}
@@ -21,14 +31,14 @@ public class DataUtilTest {
 	@Test
 	public void testInitMonth() {
 		SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-		Date date = DataUtil.initMonth(new Date());
+		Date date = DateUtil.initMonth(new Date());
 		System.out.println(df.format(date));
 	}
 
 	@Test
 	public void testEndMonth() {
 		SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-		Date date = DataUtil.endMonth(new Date());
+		Date date = DateUtil.endMonth(new Date());
 		System.out.println(df.format(date));
 	}
 }
